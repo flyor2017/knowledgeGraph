@@ -1,0 +1,11 @@
+﻿name:id(drug_id),drug_idd,component,property,indication,use_amount,use_time,contraindication,side_effects,:LABEL
+5-羟色胺再摄取抑制剂,none_1,none,none,none,none,none,none,none,药物
+去甲肾上腺素,none_2,none,none,none,none,none,none,none,药物
+5-HT双重摄取抑制剂,none_3,none,none,none,none,none,none,none,药物
+特异性5-HT抗抑郁药,none_4,none,none,none,none,none,none,none,药物
+NE和特异性5-HT抗抑郁药,none_3,none,none,none,none,none,none,none,药物
+TCAS,none_3,none,none,none,none,none,none,none,药物
+其他抑郁药物,none_3,none,none,none,none,none,none,none,药物
+药物治疗,none_3,none,none,none,none,none,none,none,药物
+电抽搐治疗,none_3,none,none,none,none,none,none,none,药物
+心理治疗,none_3,none,none,none,none,none,none,none,药物

@@ -1,0 +1,5 @@
+﻿name:id(patient_id),name,sex,age,apartment,past_history,family_history,allergy_history,disease_reason,disease_result,:LABEL
+p0001,小黑,男,25,精神科,none,none,none,学习,重度抑郁发作,病人
+p0002,小红,女,22,精神科,none,none,none,家庭压力，多方压迫,中度抑郁发作,病人
+p0003,小蓝,男,30,精神科,曾患有中度抑郁,none,none,实业,中度抑郁发作,病人
+p0004,小黄,女,35,精神科,曾患有躁狂症,家族有精神病史,青霉素过敏,none,重度抑郁发作,病人

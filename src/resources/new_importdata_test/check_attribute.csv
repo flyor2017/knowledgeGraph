@@ -1,0 +1,13 @@
+﻿:LABEL,name:id(check_id),check_content,result,others
+检查,近红外,接受刺激时大脑皮层血红蛋白和脱氧血红变化情况,1.激活高；2. 激活低,none
+检查,脑电波,做任务时脑电波受刺激情况,1.激活高；2. 激活低,none
+检查,血液,具体血液中的生化指标,1.type1指标；2. type2指标,none
+检查,核磁共振,脑部状态成像,1.type1区域；2.type2区域,none
+检查,基因检测,研究精神疾病与生物医学指标的联系,1. type1联系；2.type2联系,none 
+检查,汉密尔顿量表,自测,1. 轻微；2. 中度；3. 重度,none
+检查,PHQ-9量表,他侧,1. 轻微；2. 中度；3. 重度,none
+检查,病史检查,none,none,none
+检查,精神检查,none,none,none
+检查,人格、智能等心理测验,none,none,none
+检查,脑CT,none,none,none
+检查,脑地形图,none,none,none
