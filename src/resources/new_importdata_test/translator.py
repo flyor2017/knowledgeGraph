@@ -1,6 +1,6 @@
 import pandas as pd
 import os
-
+import json
 
 def getNameId(s):
     """
@@ -13,7 +13,7 @@ def getNameId(s):
             return ret
 
 
-def translate(inFile, outFile):
+def translate(inFile, outFile, mapping=None):
     data = pd.read_csv(inFile)
     label = ':LABEL'
     column = list(data.columns)
@@ -24,9 +24,14 @@ def translate(inFile, outFile):
         print('subject', 'predicate', 'object', sep=',', file=f)
         for i in data.iterrows():
             i = i[1]
-            print(i[label], nameid, i[nameid], sep=',', file=f)
-            for j in column:
-                print(i[nameid], j, i[j], sep=',', file=f)
+            if mapping:
+                print(i[label], mapping[nameid], i[nameid], sep=',', file=f)
+                for j in column:
+                    print(i[nameid], mapping[j], i[j], sep=',', file=f)
+            else:
+                print(i[label], nameid, i[nameid], sep=',', file=f)
+                for j in column:
+                    print(i[nameid], j, i[j], sep=',', file=f)
 
 
 def files_to_translate():
@@ -42,6 +47,7 @@ def files_to_translate():
 
 
 if __name__ == "__main__":
-
+    mapping = json.load(open('mapping.json', encoding='utf8'))
+    # print(mapping)
     for inFile, outFile in files_to_translate():
-        translate(inFile, outFile)
+        translate(inFile, outFile, mapping[inFile])

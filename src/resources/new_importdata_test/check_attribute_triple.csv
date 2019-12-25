@@ -1,49 +1,49 @@
 subject,predicate,object
-检查,name:id(check_id),近红外
-近红外,check_content,接受刺激时大脑皮层血红蛋白和脱氧血红变化情况
-近红外,result,1.激活高；2. 激活低
-近红外,others,none
-检查,name:id(check_id),脑电波
-脑电波,check_content,做任务时脑电波受刺激情况
-脑电波,result,1.激活高；2. 激活低
-脑电波,others,none
-检查,name:id(check_id),血液
-血液,check_content,具体血液中的生化指标
-血液,result,1.type1指标；2. type2指标
-血液,others,none
-检查,name:id(check_id),核磁共振
-核磁共振,check_content,脑部状态成像
-核磁共振,result,1.type1区域；2.type2区域
-核磁共振,others,none
-检查,name:id(check_id),基因检测
-基因检测,check_content,研究精神疾病与生物医学指标的联系
-基因检测,result,1. type1联系；2.type2联系
-基因检测,others,none 
-检查,name:id(check_id),汉密尔顿量表
-汉密尔顿量表,check_content,自测
-汉密尔顿量表,result,1. 轻微；2. 中度；3. 重度
-汉密尔顿量表,others,none
-检查,name:id(check_id),PHQ-9量表
-PHQ-9量表,check_content,他侧
-PHQ-9量表,result,1. 轻微；2. 中度；3. 重度
-PHQ-9量表,others,none
-检查,name:id(check_id),病史检查
-病史检查,check_content,none
-病史检查,result,none
-病史检查,others,none
-检查,name:id(check_id),精神检查
-精神检查,check_content,none
-精神检查,result,none
-精神检查,others,none
-检查,name:id(check_id),人格、智能等心理测验
-人格、智能等心理测验,check_content,none
-人格、智能等心理测验,result,none
-人格、智能等心理测验,others,none
-检查,name:id(check_id),脑CT
-脑CT,check_content,none
-脑CT,result,none
-脑CT,others,none
-检查,name:id(check_id),脑地形图
-脑地形图,check_content,none
-脑地形图,result,none
-脑地形图,others,none
+检查,检查方式,近红外
+近红外,检查内容,接受刺激时大脑皮层血红蛋白和脱氧血红变化情况
+近红外,检查结果,1.激活高；2. 激活低
+近红外,其它,none
+检查,检查方式,脑电波
+脑电波,检查内容,做任务时脑电波受刺激情况
+脑电波,检查结果,1.激活高；2. 激活低
+脑电波,其它,none
+检查,检查方式,血液
+血液,检查内容,具体血液中的生化指标
+血液,检查结果,1.type1指标；2. type2指标
+血液,其它,none
+检查,检查方式,核磁共振
+核磁共振,检查内容,脑部状态成像
+核磁共振,检查结果,1.type1区域；2.type2区域
+核磁共振,其它,none
+检查,检查方式,基因检测
+基因检测,检查内容,研究精神疾病与生物医学指标的联系
+基因检测,检查结果,1. type1联系；2.type2联系
+基因检测,其它,none 
+检查,检查方式,汉密尔顿量表
+汉密尔顿量表,检查内容,自测
+汉密尔顿量表,检查结果,1. 轻微；2. 中度；3. 重度
+汉密尔顿量表,其它,none
+检查,检查方式,PHQ-9量表
+PHQ-9量表,检查内容,他侧
+PHQ-9量表,检查结果,1. 轻微；2. 中度；3. 重度
+PHQ-9量表,其它,none
+检查,检查方式,病史检查
+病史检查,检查内容,none
+病史检查,检查结果,none
+病史检查,其它,none
+检查,检查方式,精神检查
+精神检查,检查内容,none
+精神检查,检查结果,none
+精神检查,其它,none
+检查,检查方式,人格、智能等心理测验
+人格、智能等心理测验,检查内容,none
+人格、智能等心理测验,检查结果,none
+人格、智能等心理测验,其它,none
+检查,检查方式,脑CT
+脑CT,检查内容,none
+脑CT,检查结果,none
+脑CT,其它,none
+检查,检查方式,脑地形图
+脑地形图,检查内容,none
+脑地形图,检查结果,none
+脑地形图,其它,none

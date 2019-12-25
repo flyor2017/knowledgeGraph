@@ -1,0 +1,8 @@
+@prefix epic: <http://epic.hust.edu.cn/#> .
+
+// 规则文法：http://jena.apache.org/documentation/inference/index.html#rule-syntax-and-structure
+
+
+// A属于B，则说明B的所有性质都适合A
+[属于规则: (?A epic:属于 ?B), (?B ?P ?C) -> (?A ?P ?C)]
+

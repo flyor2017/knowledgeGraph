@@ -1,0 +1,43 @@
+{
+    "check_attribute.csv": {
+        "name:id(check_id)": "检查方式",
+        "check_content": "检查内容",
+        "result": "检查结果",
+        "others": "其它"
+    },
+    "disease_attribute.csv": {
+        "name:id(disease_id)": "疾病名称",
+        "disease_id": "疾病ID",
+        "disease_concept": "疾病概念"
+    },
+    "drug_attribute.csv": {
+        "name:id(drug_id)": "药品名称",
+        "drug_idd": "药品ID",
+        "component": "药品组成",
+        "property": "药品属性",
+        "indication": "标示",
+        "use_amount": "用量",
+        "use_time": "使用时间",
+        "contraindication": "禁忌",
+        "side_effects": "副作用"
+    },
+    "duration_attribute.csv": {
+        "name:id(degree_id)": "程度"
+    },
+    "patient_attribute.csv": {
+        "name:id(patient_id)": "病人ID",
+        "name": "姓名",
+        "sex": "性别",
+        "age": "年龄",
+        "apartment": "部门",
+        "past_history": "病史",
+        "family_history": "家庭病史",
+        "allergy_history": "过敏史",
+        "disease_reason": "发病原因",
+        "disease_result": "发病结果"
+    },
+    "symptom_attribute.csv": {
+        "name:id(symptom_id)": "症状名",
+        "name_id": "症状ID"
+    }
+}

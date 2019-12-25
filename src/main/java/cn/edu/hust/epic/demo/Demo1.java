@@ -15,7 +15,11 @@ public class Demo1 {
 
         // 声明该模型中具有 p 和 q 属性
         Property p = rdfsExample.createProperty(NS, "p");
+        p = rdfsExample.createProperty(NS, "p");
         Property q = rdfsExample.createProperty(NS, "q");
+
+        Property b = rdfsExample.getProperty("urn:x-hp-jena:eg/", "p");
+        System.out.println(b);
 
         // 声明 p 是 q 的子属性
         rdfsExample.add(p, RDFS.subPropertyOf, q);
