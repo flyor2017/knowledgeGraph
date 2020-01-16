@@ -1,12 +1,11 @@
 package cn.edu.hust.epic;
 
-import com.opencsv.CSVReader;
-import java.io.FileReader;
 import java.io.PrintStream;
 
 import org.apache.jena.rdf.model.*;
 import java.io.File;
 import java.io.FileOutputStream;
+
 import org.apache.jena.reasoner.Reasoner;
 import org.apache.jena.reasoner.rulesys.GenericRuleReasoner;
 import org.apache.jena.reasoner.rulesys.Rule;
@@ -17,36 +16,7 @@ public class Controller {
     private Model model;
     private InfModel infModel;
     final static String ns = "http://epic.hust.edu.cn/#";
-
-    // 创建model
-    public void createModelFromCSV(File file) {
-        try {
-            CSVReader reader = new CSVReader(new FileReader(file));
-
-            String[] nextline;
-
-            // 跳过文件的第一行
-            reader.readNext();
-
-            while ((nextline = reader.readNext()) != null) {
-                // System.out.println(nextline[0] + '\t' + nextline[1] + '\t' + nextline[2]);
-
-                if (nextline.length != 3)
-                    continue;
-
-                Resource s = model.createResource(ns + nextline[0]);
-                Property p = model.createProperty(ns, nextline[1]);
-                Resource o = model.createResource(ns + nextline[2]);
-                model.add(s, p, o);
-            }
-
-            reader.close();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println(file.getAbsolutePath());
-        }
-    }
+    final static String dirPath = "target/classes/new_importdata_test/";
 
     // 扫描默认目录
     public Controller() {
@@ -56,9 +26,11 @@ public class Controller {
 
         File[] files = dir.listFiles();
 
+        ModelFromCSVFile modelFromCSVFile = new ModelFromCSVFile(ns);
+
         for (File f : files) {
             if (f.isFile() && f.getName().endsWith(".csv") && !f.getName().endsWith("_attribute.csv")) {
-                createModelFromCSV(f);
+                model = modelFromCSVFile.addToModelFromFile(model, f);
             }
         }
 
@@ -70,18 +42,7 @@ public class Controller {
     }
 
     // 扫描指定目录
-    public Controller(String dirPath) {
-        model = ModelFactory.createDefaultModel();
-        File dir = new File(dirPath);
-
-        File[] files = dir.listFiles();
-
-        for (File f : files) {
-            if (f.isFile() && f.getName().endsWith(".csv")) {
-                createModelFromCSV(f);
-            }
-        }
-
+    public Controller(Model model) {
         try {
             model.write(new FileOutputStream(new File(dirPath + "test.rdf")));
         } catch (Exception e) {
