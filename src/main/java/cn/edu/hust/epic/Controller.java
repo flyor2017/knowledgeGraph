@@ -43,6 +43,7 @@ public class Controller {
 
     // 扫描指定目录
     public Controller(Model model) {
+        this.model = model;
         try {
             model.write(new FileOutputStream(new File(dirPath + "test.rdf")));
         } catch (Exception e) {

@@ -6,13 +6,8 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.junit.Test;
 
-/**
- * Unit test for simple App.
- */
 public class ControllerTest {
-    /**
-     * Rigorous Test :-)
-     */
+
     @Test
     public void testCSVFile() {
         Model model = ModelFactory.createDefaultModel();
@@ -24,7 +19,7 @@ public class ControllerTest {
 
         for (File f : files) {
             if (f.isFile() && f.getName().endsWith(".csv") && !f.getName().endsWith("_attribute.csv")) {
-                model = modelFromCSVFile.addToModelFromFile(model, f);
+                modelFromCSVFile.addToModelFromFile(model, f);
             }
         }
         Controller controller = new Controller(model);
@@ -35,15 +30,15 @@ public class ControllerTest {
     @Test
     public void testExcelFile() {
         Model model = ModelFactory.createDefaultModel();
-        File dir = new File(Controller.dirPath);
+        File dir = new File(Controller.dirPath + "../");
 
         File[] files = dir.listFiles();
 
         ModelFromExcelFile modelFromExcelFile = new ModelFromExcelFile(Controller.ns);
 
         for (File f : files) {
-            if (f.isFile() && f.getName().endsWith("v1.1.xlsx")) {
-                model = modelFromExcelFile.addToModelFromFile(model, f);
+            if (f.isFile() && f.getName().endsWith("v1.1.xls")) {
+                modelFromExcelFile.addToModelFromFile(model, f);
             }
         }
         Controller controller = new Controller(model);
